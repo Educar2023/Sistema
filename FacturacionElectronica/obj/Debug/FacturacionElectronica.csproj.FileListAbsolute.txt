@@ -1,0 +1,6 @@
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\bin\Debug\FacturacionElectronica.dll
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\bin\Debug\FacturacionElectronica.pdb
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\obj\Debug\FacturacionElectronica.csprojAssemblyReference.cache
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\obj\Debug\FacturacionElectronica.csproj.CoreCompileInputs.cache
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\obj\Debug\FacturacionElectronica.dll
+D:\ODR\Seguimiento_Planillas\SysGestionAES\FacturacionElectronica\obj\Debug\FacturacionElectronica.pdb

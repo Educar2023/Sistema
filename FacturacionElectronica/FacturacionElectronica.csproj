@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00F4B8BA-91C9-4390-A1F3-8569127570C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FacturacionElectronica</RootNamespace>
+    <AssemblyName>FacturacionElectronica</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="constant\DBCredential.cs" />
+    <Compile Include="contratos\IDocumentoElectronico.cs" />
+    <Compile Include="Injector.cs" />
+    <Compile Include="intercambio\CodigoBarrasRequest.cs" />
+    <Compile Include="intercambio\CodigoBarrasResponse.cs" />
+    <Compile Include="intercambio\ConsultaConstanciaRequest.cs" />
+    <Compile Include="intercambio\ConsultaTicketRequest.cs" />
+    <Compile Include="intercambio\DocumentoResponse.cs" />
+    <Compile Include="intercambio\EnviarDocumentoRequest.cs" />
+    <Compile Include="intercambio\EnviarDocumentoResponse.cs" />
+    <Compile Include="intercambio\EnviarResumenResponse.cs" />
+    <Compile Include="intercambio\EnvioDocumentoComun.cs" />
+    <Compile Include="intercambio\FirmadoRequest.cs" />
+    <Compile Include="intercambio\FirmadoResponse.cs" />
+    <Compile Include="intercambio\PdfRequest.cs" />
+    <Compile Include="intercambio\PdfResponse.cs" />
+    <Compile Include="intercambio\ResponseGenerador.cs" />
+    <Compile Include="intercambio\RespuestaComun.cs" />
+    <Compile Include="intercambio\RespuestaComunConArchivo.cs" />
+    <Compile Include="modelos\ComunicacionBaja.cs" />
+    <Compile Include="modelos\Contribuyente.cs" />
+    <Compile Include="modelos\DatoAdicional.cs" />
+    <Compile Include="modelos\DatosGuia.cs" />
+    <Compile Include="modelos\Descuento.cs" />
+    <Compile Include="modelos\DetalleDocumento.cs" />
+    <Compile Include="modelos\DetalleGuia.cs" />
+    <Compile Include="modelos\Direccion.cs" />
+    <Compile Include="modelos\Discrepancia.cs" />
+    <Compile Include="modelos\DocumentoAnticipo.cs" />
+    <Compile Include="modelos\DocumentoBaja.cs" />
+    <Compile Include="modelos\DocumentoElectronico.cs" />
+    <Compile Include="modelos\DocumentoPercepcion.cs" />
+    <Compile Include="modelos\DocumentoRelacionado.cs" />
+    <Compile Include="modelos\DocumentoResumen.cs" />
+    <Compile Include="modelos\DocumentoResumenDetalle.cs" />
+    <Compile Include="modelos\DocumentoRetencion.cs" />
+    <Compile Include="modelos\DocumentoSunatBase.cs" />
+    <Compile Include="modelos\EmunClass.cs" />
+    <Compile Include="modelos\GastosExportacion.cs" />
+    <Compile Include="modelos\GrupoResumen.cs" />
+    <Compile Include="modelos\GrupoResumenNuevo.cs" />
+    <Compile Include="modelos\GuiaRemision.cs" />
+    <Compile Include="modelos\ItemPercepcion.cs" />
+    <Compile Include="modelos\ItemRetencion.cs" />
+    <Compile Include="modelos\ItemSunatBase.cs" />
+    <Compile Include="modelos\ResumenDiario.cs" />
+    <Compile Include="modelos\ResumenDiarioNuevo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="repository\DataAccess.cs" />
+    <Compile Include="repository\DBHelper.cs" />
+    <Compile Include="repository\implement\DirectorioRepositoryImpl.cs" />
+    <Compile Include="repository\implement\IFacVtaRepositoryImpl.cs" />
+    <Compile Include="repository\implement\TFacVtaRepositoryImpl.cs" />
+    <Compile Include="repository\implement\TickectSunatRepositoryImpl.cs" />
+    <Compile Include="repository\interfaces\IDirectorioRepository.cs" />
+    <Compile Include="repository\interfaces\IIFacVtaRepository.cs" />
+    <Compile Include="repository\interfaces\ITFacVtaRepository.cs" />
+    <Compile Include="repository\interfaces\ITickectSunatRepository.cs" />
+    <Compile Include="service\implement\DirectorioServiceImpl.cs" />
+    <Compile Include="service\implement\IFacVtaServiceImpl.cs" />
+    <Compile Include="service\implement\TFacVtaServiceImpl.cs" />
+    <Compile Include="service\implement\TicketSunatServicesImpl.cs" />
+    <Compile Include="service\interfaces\IDirectorioService.cs" />
+    <Compile Include="service\interfaces\IIFacVtaService.cs" />
+    <Compile Include="service\interfaces\ITFacVtaService.cs" />
+    <Compile Include="service\interfaces\ITicketSunatServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
